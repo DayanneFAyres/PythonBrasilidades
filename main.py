@@ -1,3 +1,6 @@
-cpf = 15616987913
-tamanho_cpf = len(str(cpf))
-print(tamanho_cpf)
+from cpf import Cpf
+
+cpf = "15616987913"
+objeto_cpf = Cpf(cpf)
+
+print(objeto_cpf)
