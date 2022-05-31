@@ -1,7 +1,6 @@
-from telefones_br import TelefonesBr
+from datas_br import DatasBr
 
-telefone_exemplo = "5527877777777"
+cadastro = DatasBr()
 
-telefone_valido = TelefonesBr(telefone_exemplo)
-
-print(telefone_valido)
+print(cadastro.MesCadastro())
+print(cadastro.DiaSemanaCadastro())
