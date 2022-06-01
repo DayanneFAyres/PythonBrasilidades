@@ -1,5 +1,7 @@
-from datas_br import DatasBr
-from datetime import datetime, timedelta
+from acesso_cep import BuscaEndereco
+import requests
 
-hoje = DatasBr()
-print(hoje.TempoCadastro())
+cep = "01001000"
+obj_cep = BuscaEndereco(cep)
+print(obj_cep)
+print(obj_cep.AcessaViaCep())
