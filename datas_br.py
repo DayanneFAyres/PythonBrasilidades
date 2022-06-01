@@ -1,9 +1,12 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 class DatasBr:
 
     def __init__(self):
         self.momento_cadastro = datetime.today()
+
+    def __str__(self):
+        return self.DataFormatada()
 
     def MesCadastro(self):
         meses = {
@@ -20,7 +23,6 @@ class DatasBr:
         return meses.get(mes_cadastro)
 
     def DiaSemanaCadastro(self):
-
         dias_semana = {
             1:"segunda",    2:"terça",
             3:"quarta",     4:"quinta",
@@ -30,3 +32,13 @@ class DatasBr:
         dia_semana_cadastro = self.momento_cadastro.weekday()
 
         return dias_semana.get(dia_semana_cadastro)
+
+    def DataFormatada(self):        
+        data_formatada = self.momento_cadastro.strftime("%d/%m/%Y %H:%M")
+        
+        return data_formatada
+
+    def TempoCadastro(self):
+        tempo_cadastro = (datetime.today() + timedelta(days=30)) - self.momento_cadastro
+
+        return tempo_cadastro

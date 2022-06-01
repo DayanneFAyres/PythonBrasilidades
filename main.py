@@ -1,6 +1,5 @@
 from datas_br import DatasBr
+from datetime import datetime, timedelta
 
-cadastro = DatasBr()
-
-print(cadastro.MesCadastro())
-print(cadastro.DiaSemanaCadastro())
+hoje = DatasBr()
+print(hoje.TempoCadastro())
